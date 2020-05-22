@@ -20,6 +20,5 @@ launch_release.bat
 /data/.cache_textures
 
 !bin/unigine.cfg
-!plugins/*
-!plugins/*/bin
+plugins/*/x64
 voxel_probes
