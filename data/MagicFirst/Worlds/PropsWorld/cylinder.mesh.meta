@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.11.0.0">
+	<guid>50f7fd21e01af40c30361ffb5f6f951e1a7179e5</guid>
+	<type>mesh</type>
+	<hash>4fed5fbd</hash>
+	<runtimes>
+		<runtime id="50f7fd21e01af40c30361ffb5f6f951e1a7179e5" name="cylinder.mesh" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+		<parameter type="float" name="scale">1</parameter>
+		<parameter type="bool" name="animation">1</parameter>
+		<parameter type="bool" name="vertex_cache">1</parameter>
+		<parameter type="bool" name="need_create_uv">0</parameter>
+		<parameter type="int" name="uv_resolution">512</parameter>
+		<parameter type="int" name="uv_padding">0</parameter>
+		<parameter type="int" name="uv_channel">1</parameter>
+		<parameter type="bool" name="uv_high_quality">0</parameter>
+	</parameters>
+</asset>

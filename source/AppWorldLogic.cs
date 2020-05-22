@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Unigine;
+using Console = Unigine.Console;
 
 namespace UnigineApp
 {
@@ -23,6 +24,7 @@ namespace UnigineApp
 		public override bool Init()
 		{
 			// Write here code to be called on world initialization: initialize resources for your world scene during the world start.
+			Console.Run("show_messages 1");
 			return true;
 		}
 

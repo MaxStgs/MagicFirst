@@ -1,0 +1,42 @@
+#include <core/systems/tracker/tracker.h>
+#include <../source/includes/tracker_wrapper.h>
+
+Unigine::Tracker::TrackerTrack track;
+float time, min_time, max_time, unit_time;
+
+int init() {
+
+	// use the Tracker namespace
+	using Unigine::Tracker;
+	return 1;
+	// create a Tracker instance that will play the tracks
+	Tracker tracker = new Tracker();
+	// load the required tracks from a file
+	track = tracker.loadTrack("MagicFirst/Worlds/PropsWorld/TestTrack.track");
+	
+	// get the start time of the track (in units)
+	min_time = track.getMinTime();
+	// get the end time of the track (in units)
+	max_time = track.getMaxTime();
+	// get the duration of the track unit (in seconds)
+	unit_time = track.getUnitTime();
+	
+	// set the initial time to play the tracks
+	time = track.getMinTime();
+
+	return 1;
+}
+
+int update() {
+	
+	if(track == NULL) return 1;
+	
+	// update the tracks animation time
+	time += engine.game.getIFps() / unit_time;
+	time = min_time + ((time - min_time)) % (max_time - min_time);
+	
+	// set animation time for tracks
+	if(engine.game.isEnabled()) track.set(time);
+	
+	return 1;
+}

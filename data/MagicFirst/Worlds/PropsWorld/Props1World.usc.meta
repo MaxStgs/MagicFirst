@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.11.0.0">
+	<guid>cf3e37ea02b90641b4ab2aacc6eca61bd94524be</guid>
+	<type>script</type>
+	<hash>fe8eee1</hash>
+	<runtimes>
+		<runtime id="cf3e37ea02b90641b4ab2aacc6eca61bd94524be" name="Props1World.usc" link="0"/>
+	</runtimes>
+</asset>

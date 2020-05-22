@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<track version="2.4" min_time="0" max_time="5" unit_time="1">
+	<parameter type="node.positionLinear" id="303779347" name="Cuboid_1">
+		<keys_x>
+			<key time="0" type="1">-5.4924798</key>
+			<key time="1.52142346" type="1">-5.4924798</key>
+		</keys_x>
+		<keys_y>
+			<key time="0" type="1">-6.62700605</key>
+			<key time="1.52142346" type="1">1.8729949</key>
+		</keys_y>
+		<keys_z>
+			<key time="0" type="1">1.60000002</key>
+			<key time="1.52142346" type="1">1.60000002</key>
+		</keys_z>
+	</parameter>
+</track>

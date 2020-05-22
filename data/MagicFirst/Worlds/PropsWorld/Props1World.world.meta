@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.11.0.0">
+	<guid>eb129257dd2e0bcaf73208a19122898ccca9b77b</guid>
+	<type>world</type>
+	<hash>b38c85e6</hash>
+	<runtimes>
+		<runtime id="eb129257dd2e0bcaf73208a19122898ccca9b77b" name="Props1World.world" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="string" name="render_settings_path"/>
+		<parameter type="string" name="sound_settings_path"/>
+		<parameter type="string" name="physics_settings_path"/>
+		<parameter type="string" name="script_name">guid://cf3e37ea02b90641b4ab2aacc6eca61bd94524be</parameter>
+	</parameters>
+</asset>

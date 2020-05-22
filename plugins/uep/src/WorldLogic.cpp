@@ -15,6 +15,10 @@ int my_world_logic::init()
     {
         take_focus();
     }
+    if (false)
+    {
+        
+    }
     Log::message("uep MyWorldLogic::init()\n");
     return 1;
 }

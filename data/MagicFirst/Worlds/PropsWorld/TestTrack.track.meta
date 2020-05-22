@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.11.0.0">
+	<guid>f172eeb499f4ca835d586e06f458edad498af328</guid>
+	<type>track</type>
+	<hash>e17c244e</hash>
+	<runtimes>
+		<runtime id="f172eeb499f4ca835d586e06f458edad498af328" name="TestTrack.track" link="0"/>
+	</runtimes>
+</asset>
