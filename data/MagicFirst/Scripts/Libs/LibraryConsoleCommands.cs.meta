@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.11.0.0">
+	<guid>d871f1292d4f88748d2b19430b3aedc6817fea6d</guid>
+	<type>component</type>
+	<hash>ca849bbb</hash>
+	<runtimes>
+		<runtime id="d871f1292d4f88748d2b19430b3aedc6817fea6d" name="LibraryConsoleCommands.cs" link="0"/>
+		<runtime id="581e8cd6a2ff5e3d76e80a78c01b4b773c82326a" name="LibraryConsoleCommands.prop" link="1"/>
+	</runtimes>
+</asset>

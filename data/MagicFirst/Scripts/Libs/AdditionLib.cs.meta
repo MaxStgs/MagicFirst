@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.11.0.0">
+	<guid>c1ab425ec9c0c625a3c8c14069e0439f924abc72</guid>
+	<type>component</type>
+	<hash>5efe6b7d</hash>
+	<runtimes>
+		<runtime id="c1ab425ec9c0c625a3c8c14069e0439f924abc72" name="AdditionLib.cs" link="0"/>
+		<runtime id="cee1a0d9592b94649e89547340490f36187a3d1d" name="AdditionLib.prop" link="1"/>
+	</runtimes>
+</asset>

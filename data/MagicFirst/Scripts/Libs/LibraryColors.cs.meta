@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.11.0.0">
+	<guid>9942a14b5168062e6bab97b5e344c59078b45baf</guid>
+	<type>component</type>
+	<hash>f0a9276f</hash>
+	<runtimes>
+		<runtime id="9942a14b5168062e6bab97b5e344c59078b45baf" name="LibraryColors.cs" link="0"/>
+		<runtime id="f23fcfa93dead4f4be08fbc30d3e6e468d6070ed" name="LibraryColors.prop" link="1"/>
+	</runtimes>
+</asset>

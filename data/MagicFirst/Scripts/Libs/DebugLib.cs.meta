@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.11.0.0">
+	<guid>abfa48e8cfd917278c7daa5a137a75f1892df69c</guid>
+	<type>component</type>
+	<hash>1e67d718</hash>
+	<runtimes>
+		<runtime id="abfa48e8cfd917278c7daa5a137a75f1892df69c" name="DebugLib.cs" link="0"/>
+		<runtime id="358f6eb0ea01b24f35477b6278cb4359ef47d4e4" name="DebugLib.prop" link="1"/>
+	</runtimes>
+</asset>

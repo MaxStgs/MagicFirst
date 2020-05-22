@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.11.0.0">
+	<guid>0b677b4e166f4a55fa0097b0fb16c74f86b78c62</guid>
+	<type>component</type>
+	<hash>7ade0f67</hash>
+	<runtimes>
+		<runtime id="0b677b4e166f4a55fa0097b0fb16c74f86b78c62" name="SimpleComponent.cs" link="0"/>
+		<runtime id="eb422059b05f0de46c0f7ff364ee44b601aef49d" name="SimpleComponent.prop" link="1"/>
+	</runtimes>
+</asset>
