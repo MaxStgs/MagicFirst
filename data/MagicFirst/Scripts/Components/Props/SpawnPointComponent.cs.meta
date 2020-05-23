@@ -2,7 +2,7 @@
 <asset version="2.11.0.0">
 	<guid>cee3a7a9d24cccf487d293c3770b26467615c8ed</guid>
 	<type>component</type>
-	<hash>555f2216</hash>
+	<hash>54f94f3a</hash>
 	<runtimes>
 		<runtime id="cee3a7a9d24cccf487d293c3770b26467615c8ed" name="SpawnPointComponent.cs" link="0"/>
 		<runtime id="88bd95684ebef9a7b4e92ada82a2fc717653cb1c" name="SpawnPointComponent.prop" link="1"/>
