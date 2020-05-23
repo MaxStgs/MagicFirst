@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.11.0.0">
+	<guid>f220a53dace2a5787a972a77d6a6856a8365f5c1</guid>
+	<type>property</type>
+	<hash>be8729ca</hash>
+	<runtimes>
+		<runtime id="f220a53dace2a5787a972a77d6a6856a8365f5c1" name="BonfireProp" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+	</parameters>
+</asset>

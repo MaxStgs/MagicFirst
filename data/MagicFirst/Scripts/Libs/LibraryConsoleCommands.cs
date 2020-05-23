@@ -83,17 +83,7 @@ public class LibraryConsoleCommands
             }
 
             if (spawnPointComponent.Index != indexForJump) continue;
-
-            Log.Message("Found\n");
-
-            var cuboid = World.GetNodeByName("Cuboid");
-            if (cuboid == null)
-            {
-                Log.Message("Cuboid is null!\n");
-                return;
-            }
-
-            cuboid.Position = spawnPointComponent.GetSpawnPosition();
+            
             var fpsComponent = Game.Player.GetComponent<FirstPersonController>();
             if (fpsComponent != null)
             {

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <nodes version="2.11.0.0">
-	<node type="NodeDummy" id="1762362375" name="SpawnPoint">
+	<node type="NodeDummy" id="1131930502" name="SpawnPoint">
 		<properties>
-			<property parent="88bd95684ebef9a7b4e92ada82a2fc717653cb1c" guid="daa1b50171dc8a6c685502dbaf465a7e015dbfc5"/>
+			<property parent="88bd95684ebef9a7b4e92ada82a2fc717653cb1c" guid="6b1ea2fccc89a22b4c3c518e1adbab95e18107f0"/>
 		</properties>
 		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
-		<node type="WorldTrigger" id="223314562" name="WorldTrigger">
+		<node type="WorldTrigger" id="642208738" name="WorldTrigger">
 			<touch>1</touch>
 			<size>5.69999981 0.336547136 4</size>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 2 1.0</transform>
 		</node>
-		<node type="ObjectMeshStatic" id="1441754809" trigger_interaction_enabled="1" name="Sphere">
+		<node type="ObjectMeshStatic" id="1250420644" trigger_interaction_enabled="1" name="Sphere">
 			<mesh_name>guid://3f8cba4dba5417487a02d20710f167ba692f53d1</mesh_name>
 			<surface name="sphere" physics_friction="1" physics_restitution="1" material="cc4deae3982552e6edd1cd0dee0e8b08b25932c7"/>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 4.1999998 1.0</transform>

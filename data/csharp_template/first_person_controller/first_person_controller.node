@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <nodes version="2.11.0.0">
-	<node type="PlayerDummy" id="1318269240" trigger_interaction_enabled="1" name="first_person_controller">
+	<node type="PlayerDummy" id="558613626" trigger_interaction_enabled="1" name="first_person_controller">
 		<znear>0.00999999978</znear>
 		<zfar>20000</zfar>
 		<oblique_frustum_plane>0 0 -1 0</oblique_frustum_plane>
@@ -8,10 +8,12 @@
 		<is_main>1</is_main>
 		<controlled>1</controlled>
 		<properties>
-			<property parent="df4f4519e86e6ba48bf1c2b3aec42876380a055d" guid="e56049796c69e4843fc02613c037745674001fbd">
+			<property parent="df4f4519e86e6ba48bf1c2b3aec42876380a055d" guid="63c01410cabe582ffbd327c209f14439886f2044">
+				<parameter name="useExternalBody">0</parameter>
 				<parameter name="gravityMultiplier">1</parameter>
 				<parameter name="showAdvancedSettings">1</parameter>
 			</property>
+			<property parent="ade885fbcc22c31e81decfe5e8f1c0002335b35f" guid="baf7a92dedcf78a8c27303e75163301a962cc0b1"/>
 		</properties>
 		<transform>0.99999857 0 -3.8742965e-07 0.0 4.2146746e-07 -8.4293461e-08 0.99999744 0.0 8.9406967e-08 -0.99999791 5.9604517e-08 0.0 0 0 0 1.0</transform>
 	</node>

@@ -19,14 +19,14 @@
 		<EnableDefaultItems>false</EnableDefaultItems>
 		<SkipPostBuild>false</SkipPostBuild>
 	</PropertyGroup>
-	<PropertyGroup Condition="&apos;$(Configuration)&apos;==&apos;Release&apos;">
+	<PropertyGroup Condition="'$(Configuration)'=='Release'">
 		<AssemblyName>MagicFirst_x64</AssemblyName>
 		<PlatformTarget>x64</PlatformTarget>
 		<DebugType>portable</DebugType>
 		<Optimize>true</Optimize>
 		<DefineConstants>TRACE;NDEBUG;</DefineConstants>
 	</PropertyGroup>
-	<PropertyGroup Condition="&apos;$(Configuration)&apos;==&apos;Debug&apos;">
+	<PropertyGroup Condition="'$(Configuration)'=='Debug'">
 		<AssemblyName>MagicFirst_x64d</AssemblyName>
 		<PlatformTarget>x64</PlatformTarget>
 		<DebugSymbols>true</DebugSymbols>
@@ -35,36 +35,43 @@
 		<DefineConstants>TRACE;DEBUG;</DefineConstants>
 	</PropertyGroup>
 	<ItemGroup>
-		<Reference Include="System"/>
-		<Reference Include="System.Core"/>
-		<Reference Include="System.Drawing"/>
+		<Reference Include="System" />
+		<Reference Include="System.Core" />
+		<Reference Include="System.Drawing" />
 		<Reference Include="UnigineSharp">
 			<SpecificVersion>false</SpecificVersion>
-			<HintPath Condition="&apos;$(Configuration)&apos;==&apos;Debug&apos;">bin\UnigineSharpCore_x64d.dll</HintPath>
-			<HintPath Condition="&apos;$(Configuration)&apos;==&apos;Release&apos;">bin\UnigineSharpCore_x64.dll</HintPath>
+			<HintPath Condition="'$(Configuration)'=='Debug'">bin\UnigineSharpCore_x64d.dll</HintPath>
+			<HintPath Condition="'$(Configuration)'=='Release'">bin\UnigineSharpCore_x64.dll</HintPath>
 		</Reference>
-		<Compile Include="data/MagicFirst/Scripts/Components/SimpleComponent.cs"/>
-		<Compile Include="data/csharp_template/first_person_controller/components/FirstPersonController.cs"/>
-		<Compile Include="data/MagicFirst/Scripts/Components/TrackComponent.cs"/>
-		<Compile Include="data/MagicFirst/Scripts/Components/Props/SpawnPointComponent.cs"/>
-		<Compile Include="data/MagicFirst/Scripts/Libs/DebugLib.cs"/>
-		<Compile Include="data/MagicFirst/Scripts/Libs/LibraryColors.cs"/>
-		<Compile Include="data/MagicFirst/Scripts/Libs/LibraryConsoleCommands.cs"/>
-		<Compile Include="data/MagicFirst/Scripts/Libs/AdditionLib.cs"/>
-		<Compile Include="data/MagicFirst/Scripts/Components/PlayerController.cs"/>
-		<Compile Include="data/MagicFirst/Scripts/Components/CamContoller.cs"/>
+		<Compile Include="data/MagicFirst/Scripts/Components/SimpleComponent.cs" />
+		<Compile Include="data/csharp_template/first_person_controller/components/FirstPersonController.cs" />
+		<Compile Include="data/MagicFirst/Scripts/Libs/DebugLib.cs" />
+		<Compile Include="data/MagicFirst/Scripts/Libs/LibraryColors.cs" />
+		<Compile Include="data/MagicFirst/Scripts/Libs/LibraryConsoleCommands.cs" />
+		<Compile Include="data/MagicFirst/Scripts/Libs/AdditionLib.cs" />
+		<Compile Include="data/MagicFirst/Scripts/Components/Props/SpawnPointComponent.cs" />
+		<Compile Include="data/MagicFirst/Scripts/Components/TrackComponent.cs" />
+		<Compile Include="data/MagicFirst/Scripts/Components/Props/BonfireComponent.cs" />
+		<Compile Include="data/MagicFirst/Scripts/Components/Props/HealthComponent.cs" />
+		<Compile Include="data/MagicFirst/Scripts/Libs/PropLib.cs" />
 	</ItemGroup>
 	<ItemGroup>
-		<Compile Include="source\AppEditorLogic.cs"/>
-		<Compile Include="source\AppSystemLogic.cs"/>
-		<Compile Include="source\AppWorldLogic.cs"/>
-		<Compile Include="source\main.cs"/>
+		<Compile Include="source\AppEditorLogic.cs" />
+		<Compile Include="source\AppSystemLogic.cs" />
+		<Compile Include="source\AppWorldLogic.cs" />
+		<Compile Include="source\main.cs" />
 	</ItemGroup>
 	<ItemGroup>
-		<ClInclude Include="source\includes\tracker_wrapper.h"/>
+		<ClInclude Include="source\includes\tracker_wrapper.h" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="data\MagicFirst\Scripts\Props\HealthProp.prop" />
+	  <Content Include="data\MagicFirst\Scripts\Props\HealthProp.prop.meta" />
+	  <Content Include="data\MagicFirst\Scripts\Props\SpawnPointProp.prop" />
+	  <Content Include="data\MagicFirst\Scripts\Props\SpawnPointProp.prop.meta" />
 	</ItemGroup>
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-		<Exec Command="dotnet $(OutputPath)cspropgen_core_x64d.dll -p $(OutputPath)$(AssemblyName).dll -data_path ../data/" Condition="&apos;$(Configuration)&apos;==&apos;Debug&apos; And $(SkipPostBuild)==&apos;false&apos;"/>
-		<Exec Command="dotnet $(OutputPath)cspropgen_core_x64.dll -p $(OutputPath)$(AssemblyName).dll -data_path ../data/" Condition="&apos;$(Configuration)&apos;==&apos;Release&apos; And $(SkipPostBuild)==&apos;false&apos;"/>
+		<Exec Command="dotnet $(OutputPath)cspropgen_core_x64d.dll -p $(OutputPath)$(AssemblyName).dll -data_path ../data/" Condition="'$(Configuration)'=='Debug' And $(SkipPostBuild)=='false'" />
+		<Exec Command="dotnet $(OutputPath)cspropgen_core_x64.dll -p $(OutputPath)$(AssemblyName).dll -data_path ../data/" Condition="'$(Configuration)'=='Release' And $(SkipPostBuild)=='false'" />
 	</Target>
 </Project>

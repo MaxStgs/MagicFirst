@@ -17,7 +17,7 @@ public class SpawnPointComponent : Component
         // write here code to be called on component initialization
         worldTrigger = node.GetChild(0) as WorldTrigger;
         debugSphere = node.GetChild(1);
-        var result = LoadValue("SpawnPointProp", "Index");
+        var result = PropLib.LoadValue(node, "SpawnPointProp", "Index");
         if (result == null)
         {
             Log.Message($"SpawnPointComponent can not find value from SpawnPointProp for Index");
@@ -33,25 +33,6 @@ public class SpawnPointComponent : Component
         {
             worldTrigger.AddEnterCallback(EnterCallback);
         }
-    }
-
-    private Variable LoadValue(string propertyName, string name)
-    {
-        var propOwner = node.Parent == null ? node : node.Parent;
-        var propIndex = propOwner.FindProperty(propertyName);
-        if (propIndex == -1)
-        {
-            return null;
-        }
-
-        var prop = propOwner.GetProperty(propIndex);
-        var ptr = prop.GetParameterPtr(name);
-        return ptr == null ? null : ptr.GetValue();
-
-        // for (var i = 0; i < propOwner.NumProperties; i++)
-        // {
-        //     propOwner.GetProperty(i)
-        // }
     }
 
     private void Update()
