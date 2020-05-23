@@ -256,7 +256,7 @@
 		<render_lights_lens_flares>1</render_lights_lens_flares>
 		<render_lights_max_per_batch>1024</render_lights_max_per_batch>
 		<render_lights_tile_grid_size>8</render_lights_tile_grid_size>
-		<render_max_fps>0</render_max_fps>
+		<render_max_fps>60</render_max_fps>
 		<render_motion_blur>0</render_motion_blur>
 		<render_motion_blur_camera_velocity>1</render_motion_blur_camera_velocity>
 		<render_motion_blur_max_velocity>0.0299999993</render_motion_blur_max_velocity>
@@ -609,45 +609,25 @@
 			<surface name="cylinder" physics_friction="1" physics_restitution="1" material="401e90ccd85f4f2bb97c19ab9e1351325c4012eb"/>
 			<transform>1.6999999 0 0 0.0 0 1.4000001 0 0.0 0 0 3.1999998 0.0 3.0999994 6.4999981 1.7 1.0</transform>
 		</node>
-		<node type="ObjectMeshStatic" id="13309269" name="Capsule">
-			<mesh_name>guid://7f37a684217f00138bc48656c15609bd4923bff8</mesh_name>
-			<surface name="capsule" physics_friction="1" physics_restitution="1" material="401e90ccd85f4f2bb97c19ab9e1351325c4012eb"/>
-			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -2.3841858e-07 -7.499999 1.5 1.0</transform>
-		</node>
 		<node type="NodeReference" id="1358323107" trigger_interaction_enabled="1" name="first_person_controller">
 			<reference>guid://59e4bb833f8dab069c5b06ad189c382836a5bd67</reference>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -3.9000001 -3.2000003 1.3 1.0</transform>
 		</node>
-		<node type="NodeDummy" id="1199695613" name="NodeDummy">
+		<node type="NodeReference" id="925273589" name="SpawnPoint">
+			<reference>guid://09a52a2da70505a845592ce7ac69451aaed9d1b1</reference>
 			<properties>
-				<property parent="88bd95684ebef9a7b4e92ada82a2fc717653cb1c" guid="44394a34c5fc7003cf2cd58678df2f2de7f546a8"/>
+				<property parent="443f2b716753a7f35d35c6ce642d34d76c591821" guid="d1bc4ce66c187f0de491950866fcb4c7ceba6b7a"/>
 			</properties>
-			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -4.35396 0.36336368 -0.097385168 1.0</transform>
-			<node type="WorldTrigger" id="1225324994" name="WorldTrigger">
-				<touch>1</touch>
-				<size>5.69999981 0.336547136 8.39999962</size>
-				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0.60832769 0.60000002 1.0</transform>
-			</node>
-			<node type="ObjectMeshStatic" id="840633958" trigger_interaction_enabled="1" name="Sphere">
-				<mesh_name>guid://3f8cba4dba5417487a02d20710f167ba692f53d1</mesh_name>
-				<surface name="sphere" physics_friction="1" physics_restitution="1" material="cc4deae3982552e6edd1cd0dee0e8b08b25932c7"/>
-				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 6 1.0</transform>
-			</node>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -7.1000004 1.2000005 -0.099999905 1.0</transform>
 		</node>
-		<node type="ObjectMeshStatic" id="303779347" trigger_interaction_enabled="1" name="Cuboid_1">
-			<mesh_name>guid://d508e1eda80bda68d2367aa79860b7da76e32571</mesh_name>
-			<surface name="box" physics_friction="1" physics_restitution="1" material="cc4deae3982552e6edd1cd0dee0e8b08b25932c7"/>
+		<node type="NodeReference" id="1958987515" name="SpawnPoint_1">
+			<reference>guid://09a52a2da70505a845592ce7ac69451aaed9d1b1</reference>
 			<properties>
-				<property parent="9a98ef7c68ba84abd376d20ed4873215c94ddc70" guid="f63f429a7338b131fab278dce122be8b1eb1026e">
-					<parameter name="track">guid://f172eeb499f4ca835d586e06f458edad498af328</parameter>
+				<property parent="443f2b716753a7f35d35c6ce642d34d76c591821" guid="2be595b08eebad4f522b3a625575f659a244ebe4">
+					<parameter name="Index">1</parameter>
 				</property>
 			</properties>
-			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -5.4924798 -6.6270061 1.6 1.0</transform>
-		</node>
-		<node type="ObjectMeshStatic" id="85491561" trigger_interaction_enabled="1" name="Cuboid_2">
-			<mesh_name>guid://d508e1eda80bda68d2367aa79860b7da76e32571</mesh_name>
-			<surface name="box" physics_friction="1" physics_restitution="1" material="cc4deae3982552e6edd1cd0dee0e8b08b25932c7"/>
-			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -2.8924799 -6.6270061 1.6 1.0</transform>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -7.1000004 -8.3000002 -0.099999905 1.0</transform>
 		</node>
 	</editor>
 </world>

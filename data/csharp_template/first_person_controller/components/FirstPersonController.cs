@@ -794,6 +794,11 @@ public class FirstPersonController : Component
 		}
 	}
 
+	public void Hack_UpdatePosition(vec3 newPosition)
+	{
+		position = newPosition;
+	}
+
 	private void UpdatePosition(float ifps)
 	{
 		position += new vec3(velocity * ifps);

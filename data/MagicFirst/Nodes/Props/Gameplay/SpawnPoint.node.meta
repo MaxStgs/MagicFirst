@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.11.0.0">
+	<guid>09a52a2da70505a845592ce7ac69451aaed9d1b1</guid>
+	<type>node</type>
+	<hash>e760e7bc</hash>
+	<runtimes>
+		<runtime id="09a52a2da70505a845592ce7ac69451aaed9d1b1" name="SpawnPoint.node" link="0"/>
+	</runtimes>
+</asset>

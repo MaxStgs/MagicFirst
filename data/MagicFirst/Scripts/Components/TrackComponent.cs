@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using Unigine;
 using Unigine.Plugins;
+using Component = Unigine.Component;
 
 [Component(PropertyGuid = "9a98ef7c68ba84abd376d20ed4873215c94ddc70")]
 public class TrackComponent : Component
@@ -17,6 +19,7 @@ public class TrackComponent : Component
 		
 		Engine.RunWorldFunction(new Variable("TrackerWrapper::init"),
 			new Variable(track.Path));
+		
 	}
 
 	private float time = 0.0f;

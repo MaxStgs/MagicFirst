@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.11.0.0">
+	<guid>443f2b716753a7f35d35c6ce642d34d76c591821</guid>
+	<type>property</type>
+	<hash>07b536dd</hash>
+	<runtimes>
+		<runtime id="443f2b716753a7f35d35c6ce642d34d76c591821" name="SpawnPointProp" link="0"/>
+	</runtimes>
+</asset>

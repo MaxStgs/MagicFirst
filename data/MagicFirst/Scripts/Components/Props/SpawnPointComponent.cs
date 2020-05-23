@@ -1,5 +1,7 @@
+using System;
 using System.Diagnostics;
 using Unigine;
+using UnigineApp;
 
 [Component(PropertyGuid = "88bd95684ebef9a7b4e92ada82a2fc717653cb1c")]
 public class SpawnPointComponent : Component
@@ -8,11 +10,21 @@ public class SpawnPointComponent : Component
 
     private Node debugSphere;
 
+    [ShowInEditor] public int Index { get; private set; } = 0;
+
     private void Init()
     {
         // write here code to be called on component initialization
         worldTrigger = node.GetChild(0) as WorldTrigger;
         debugSphere = node.GetChild(1);
+        var result = LoadValue("SpawnPointProp", "Index");
+        if (result == null)
+        {
+            Log.Message($"SpawnPointComponent can not find value from SpawnPointProp for Index");
+            return;
+        }
+
+        Index = result.Int;
         if (worldTrigger == null)
         {
             Log.Message($"Node: {node.Name} can not find PhysicalTrigger inside SpawnPointComponent\n");
@@ -23,6 +35,25 @@ public class SpawnPointComponent : Component
         }
     }
 
+    private Variable LoadValue(string propertyName, string name)
+    {
+        var propOwner = node.Parent == null ? node : node.Parent;
+        var propIndex = propOwner.FindProperty(propertyName);
+        if (propIndex == -1)
+        {
+            return null;
+        }
+
+        var prop = propOwner.GetProperty(propIndex);
+        var ptr = prop.GetParameterPtr(name);
+        return ptr == null ? null : ptr.GetValue();
+
+        // for (var i = 0; i < propOwner.NumProperties; i++)
+        // {
+        //     propOwner.GetProperty(i)
+        // }
+    }
+
     private void Update()
     {
         // write here code to be called before updating each render frame
@@ -31,7 +62,7 @@ public class SpawnPointComponent : Component
 
     private void EnterCallback(Node node1)
     {
-        Log.Message($"Enter: {node1.Name}\n");
+        // Log.Message($"Enter: {node1.Name}\n");
         if (debugSphere == null) return;
         var mesh = (debugSphere as ObjectMeshStatic);
         if (mesh == null)
@@ -40,6 +71,17 @@ public class SpawnPointComponent : Component
         }
 
         mesh.SetMaterialParameterFloat4("albedo_color", ColorLib.Blue, 0);
-        Engine.RunWorldFunction(new Variable("TrackerWrapper::set"), new Variable(2.5f));
+        AppWorldLogic.CurrentWorld.LastSpawnPointIndex = Index;
+        Log.Message($"Current index: {Index}\n");
+    }
+
+    public vec3 GetSpawnPosition()
+    {
+        return worldTrigger.WorldTransform.Translate;
+    }
+
+    public mat4 GetSpawnTransform()
+    {
+        return worldTrigger.GetIWorldTransform();
     }
 }

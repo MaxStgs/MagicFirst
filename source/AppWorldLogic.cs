@@ -17,6 +17,10 @@ namespace UnigineApp
 
 		private LibraryConsoleCommands libraryConsoleCommands = new LibraryConsoleCommands();
 
+		public int LastSpawnPointIndex { get; set; } = -1;
+
+		public static AppWorldLogic CurrentWorld { get; private set; }
+
 		public AppWorldLogic()
 		{
 		}
@@ -24,6 +28,7 @@ namespace UnigineApp
 		public override bool Init()
 		{
 			// Write here code to be called on world initialization: initialize resources for your world scene during the world start.
+			CurrentWorld = this;
 			Console.Run("show_messages 1");
 			return true;
 		}
