@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.11.0.0">
+	<node type="NodeDummy" id="845052772" name="Bonfire">
+		<properties>
+			<property parent="68bd7eaa6d201e01811ddf6c838453dbd3f3777e" guid="fee0699ae7f1ac311f1937dc5174718bdb29196e"/>
+		</properties>
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+		<node type="ObjectMeshStatic" id="2099863379" name="Plane">
+			<mesh_name>guid://31002c8323f8680632149fad96fefd283927be67</mesh_name>
+			<surface name="plane" intersection="0" collision_mask="0x0" physics_friction="1" physics_restitution="1" material="fbc9263de6d73278a1305377d3c39a6a013e06c1"/>
+			<transform>0.19999996 0 0 0.0 0 0.19999999 0 0.0 0 0 0.99999988 0.0 0 0 0 1.0</transform>
+		</node>
+		<node type="WorldTrigger" id="1655347568" name="WorldTrigger">
+			<touch>1</touch>
+			<size>2 2 2</size>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0.70000011 1.0</transform>
+		</node>
+	</node>
+</nodes>

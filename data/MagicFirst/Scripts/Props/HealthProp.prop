@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.11.0.0" name="HealthProp" guid="c4049335c674b5fb800044492f312172e1481c3f" parent="1c613bbca0afd78c1ef165fc8e419352c5903d9e" manual="1">
+	<parameter name="MaxHealth" type="float" title="Max health">100</parameter>
+	<parameter name="ShouldUseHealth" type="toggle" title="Should use health">0</parameter>
+	<parameter name="Health" type="float" ShouldUseHealth="1">100</parameter>
+</property>

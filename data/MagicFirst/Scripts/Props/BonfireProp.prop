@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property version="2.11.0.0" name="BonfireProp" guid="f220a53dace2a5787a972a77d6a6856a8365f5c1" parent="1c613bbca0afd78c1ef165fc8e419352c5903d9e">
+	<parameter name="Damage" type="float" title="Damage per tick">1</parameter>
+	<parameter name="TicksPerMinute" type="float" title="Ticks per minute">10</parameter>
+</property>

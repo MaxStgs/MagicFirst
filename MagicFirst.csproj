@@ -51,6 +51,9 @@
 		<Compile Include="data/MagicFirst/Scripts/Libs/AdditionLib.cs" />
 		<Compile Include="data/MagicFirst/Scripts/Components/Props/SpawnPointComponent.cs" />
 		<Compile Include="data/MagicFirst/Scripts/Components/TrackComponent.cs" />
+		<Compile Include="data/MagicFirst/Scripts/Components/Props/BonfireComponent.cs" />
+		<Compile Include="data/MagicFirst/Scripts/Components/Props/HealthComponent.cs" />
+		<Compile Include="data/MagicFirst/Scripts/Libs/PropLib.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="source\AppEditorLogic.cs" />
@@ -59,7 +62,13 @@
 		<Compile Include="source\main.cs" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ClInclude Include="source\includes\tracker_wrapper.h" />
+		<ClInclude Include="source\includes\tracker_wrapper.h" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="data\MagicFirst\Scripts\Props\HealthProp.prop" />
+	  <Content Include="data\MagicFirst\Scripts\Props\HealthProp.prop.meta" />
+	  <Content Include="data\MagicFirst\Scripts\Props\SpawnPointProp.prop" />
+	  <Content Include="data\MagicFirst\Scripts\Props\SpawnPointProp.prop.meta" />
 	</ItemGroup>
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Exec Command="dotnet $(OutputPath)cspropgen_core_x64d.dll -p $(OutputPath)$(AssemblyName).dll -data_path ../data/" Condition="'$(Configuration)'=='Debug' And $(SkipPostBuild)=='false'" />

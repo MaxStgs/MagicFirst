@@ -602,7 +602,7 @@
 		<node type="ObjectMeshStatic" id="612173746" name="Cuboid">
 			<mesh_name>guid://1422368b377a1a6e48e81ef5727b23d09c44a4ef</mesh_name>
 			<surface name="box" physics_friction="1" physics_restitution="1" material="401e90ccd85f4f2bb97c19ab9e1351325c4012eb"/>
-			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -4.1999998 6.0999994 0.69999999 1.0</transform>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -4.3999996 6.0999994 0.69999999 1.0</transform>
 		</node>
 		<node type="ObjectMeshStatic" id="440294942" name="Cylinder">
 			<mesh_name>guid://50f7fd21e01af40c30361ffb5f6f951e1a7179e5</mesh_name>
@@ -611,7 +611,12 @@
 		</node>
 		<node type="NodeReference" id="1358323107" trigger_interaction_enabled="1" name="first_person_controller">
 			<reference>guid://59e4bb833f8dab069c5b06ad189c382836a5bd67</reference>
-			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -3.9000001 -3.2000003 1.3 1.0</transform>
+			<properties>
+				<property parent="c4049335c674b5fb800044492f312172e1481c3f" guid="b60518faf30ed41132577e3cfb08446bf5900ece">
+					<parameter name="ShouldUseHealth">0</parameter>
+				</property>
+			</properties>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -5.5 -3.2000003 1.3 1.0</transform>
 		</node>
 		<node type="NodeReference" id="925273589" name="SpawnPoint">
 			<reference>guid://09a52a2da70505a845592ce7ac69451aaed9d1b1</reference>
@@ -628,6 +633,15 @@
 				</property>
 			</properties>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -7.1000004 -8.3000002 -0.099999905 1.0</transform>
+		</node>
+		<node type="NodeReference" id="701898753" name="Bonfire">
+			<reference>guid://247166b84d167ab7175718aa8848f001a7dc896c</reference>
+			<properties>
+				<property parent="f220a53dace2a5787a972a77d6a6856a8365f5c1" guid="2c6441d8ddda5b576c6940ca0151b9a1fe44868c">
+					<parameter name="TicksPerMinute">120</parameter>
+				</property>
+			</properties>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -1.2524365 5.9748197 0.14186396 1.0</transform>
 		</node>
 	</editor>
 </world>
