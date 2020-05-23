@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.11.0.0">
+	<guid>44a645c9c94f9494ad2076e3929e6ee6a320390d</guid>
+	<type>mesh</type>
+	<hash>6b9472e7</hash>
+	<runtimes>
+		<runtime id="44a645c9c94f9494ad2076e3929e6ee6a320390d" name="box_0.mesh" link="0"/>
+	</runtimes>
+	<parameters>
+		<parameter type="bool" name="unchanged">1</parameter>
+		<parameter type="float" name="scale">1</parameter>
+		<parameter type="bool" name="animation">1</parameter>
+		<parameter type="bool" name="vertex_cache">1</parameter>
+		<parameter type="bool" name="need_create_uv">0</parameter>
+		<parameter type="int" name="uv_resolution">512</parameter>
+		<parameter type="int" name="uv_padding">0</parameter>
+		<parameter type="int" name="uv_channel">1</parameter>
+		<parameter type="bool" name="uv_high_quality">0</parameter>
+	</parameters>
+</asset>

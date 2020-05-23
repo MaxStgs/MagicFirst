@@ -2808,5 +2808,30 @@
 			<reference>guid://59e4bb833f8dab069c5b06ad189c382836a5bd67</reference>
 			<transform>-0.70710671 0.70710677 0 0.0 -0.70710677 -0.70710671 0 0.0 0 0 0.99999988 0.0 6.0763869 11.499999 3.2710779 1.0</transform>
 		</node>
+		<node type="ObjectMeshStatic" id="477515303" name="Capsule">
+			<mesh_name>guid://20d39b2d5e66c2a8fb9dc5e733db0a1a211ed2b1</mesh_name>
+			<surface name="capsule" material="401e90ccd85f4f2bb97c19ab9e1351325c4012eb"/>
+			<properties>
+				<property parent="c1b405274d6fc05a7a8993f1b8e67c9ca1056f4b" guid="928a58426b11bab9f8cc24c4cc96e9538a2ade96">
+					<parameter name="playerDummy">575003590</parameter>
+				</property>
+			</properties>
+			<transform>0.99999988 0 0 0.0 0 0.99999988 0 0.0 0 0 0.99999994 0.0 -16.5124 18.95125 1.6072626 1.0</transform>
+			<node type="PlayerDummy" id="575003590" name="PlayerDummy">
+				<fov>90</fov>
+				<znear>0.300000012</znear>
+				<zfar>20000</zfar>
+				<oblique_frustum_plane>0 0 -1 0</oblique_frustum_plane>
+				<is_oblique_frustum>0</is_oblique_frustum>
+				<is_main>0</is_main>
+				<controlled>1</controlled>
+				<transform>0.99821538 -0.027599644 0.05295454 0.0 -0.027599713 0.57314724 0.81898761 0.0 -0.052954495 -0.81898719 0.57136238 0.0 -0.010234833 -4.1036015 3.2677634 1.0</transform>
+			</node>
+			<node type="ObjectMeshStatic" id="1969793818" name="Cuboid">
+				<mesh_name>guid://44a645c9c94f9494ad2076e3929e6ee6a320390d</mesh_name>
+				<surface name="box" material="444ada0cd248cdfb09b66b1edf4e57e55fcba800"/>
+				<transform>0.7499994 0 0 0.0 0 0.49999991 0 0.0 0 0 0.099999905 0.0 0.031658173 0.24605942 0.47689986 1.0</transform>
+			</node>
+		</node>
 	</editor>
 </world>

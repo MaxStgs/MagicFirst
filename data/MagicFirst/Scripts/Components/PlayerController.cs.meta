@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset version="2.11.0.0">
+	<guid>2f0f4e7462cc27436dfca3c679da286d4b436ee8</guid>
+	<type>component</type>
+	<hash>00fbc9c5</hash>
+	<runtimes>
+		<runtime id="2f0f4e7462cc27436dfca3c679da286d4b436ee8" name="PlayerController.cs" link="0"/>
+		<runtime id="c1b405274d6fc05a7a8993f1b8e67c9ca1056f4b" name="PlayerController.prop" link="1"/>
+	</runtimes>
+</asset>

@@ -2,7 +2,7 @@
 <asset version="2.11.0.0">
 	<guid>4a6fe70e2a8b43156f48b970f8f2fe0f8176d422</guid>
 	<type>component</type>
-	<hash>36f412bc</hash>
+	<hash>8b5c4925</hash>
 	<runtimes>
 		<runtime id="4a6fe70e2a8b43156f48b970f8f2fe0f8176d422" name="FirstPersonController.cs" link="0"/>
 		<runtime id="df4f4519e86e6ba48bf1c2b3aec42876380a055d" name="FirstPersonController.prop" link="1"/>
