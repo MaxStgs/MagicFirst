@@ -6,7 +6,7 @@ using Unigine;
 [Component(PropertyGuid = "c1b405274d6fc05a7a8993f1b8e67c9ca1056f4b")]
 public class PlayerController : Component
 {
-	// controls
+	//CharacterController
 	[ShowInEditor][Parameter(Group = "Control", Tooltip = "Forward axis")]
 	private Input.KEY ForwardInputKey = Input.KEY.W;
 
@@ -535,7 +535,6 @@ public class PlayerController : Component
 
 		objectDummy.WorldTransform = GetBodyTransform();
 	}
-	//Hello
 	private void FlushTransform()
 	{
 		var up = vec3.UP;
