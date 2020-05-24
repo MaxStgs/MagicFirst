@@ -1,7 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Timers;
 using Unigine;
 
 [Component(PropertyGuid = "68bd7eaa6d201e01811ddf6c838453dbd3f3777e")]
@@ -9,38 +9,61 @@ public class BonfireComponent : Component
 {
 	private WorldTrigger worldTrigger;
 
-	public float Damage { get; set; }
+	private float Damage { get; set; }
 
-	public float TicksPerMinute { get; set; }
+	private float TicksPerMinute { get; set; }
 
-	struct PlayerTimer
+	private class PlayerTimer
 	{
-		public HealthComponent healthComponent { get; }
-		public float time { get; set; }
+		public HealthComponent HealthComponent { get; }
+		private float Time { get; set; }
 
-		public PlayerTimer(HealthComponent healthComponent, float time)
+		private float TicksPerMinute { get; }
+
+		internal delegate void DelegateTakeDamage(HealthComponent healthComponent);
+
+		private readonly DelegateTakeDamage delegateTakeDamage;
+
+		public PlayerTimer(HealthComponent healthComponent, float ticksPerMinute, DelegateTakeDamage delegateTakeDamage)
 		{
-			this.healthComponent = healthComponent;
-			this.time = time;
+			HealthComponent = healthComponent;
+			TicksPerMinute = ticksPerMinute;
+			this.delegateTakeDamage = delegateTakeDamage;
+			Time = 0.0f;
+			RefreshTimer();
 		}
 
-		public void Tick()
+		private void RefreshTimer()
 		{
-			if (time <= 0.0f)
+			Time = 60.0f / TicksPerMinute;
+		}
+
+		public void Tick(float iFps)
+		{
+			if (Time <= 0.0f)
 			{
-								
+				delegateTakeDamage(HealthComponent);
+				RefreshTimer();
+				return;
 			}
+
+			Time -= iFps;
 		}
 	}
 
-	private List<PlayerTimer> timers = new List<PlayerTimer>();
+	private static void TakeDamage(HealthComponent healthComponent)
+	{
+		Log.Message("Take damage\n");
+		healthComponent.TakeDamage(10);
+	}
+
+	private readonly List<PlayerTimer> timers = new List<PlayerTimer>();
 	
 	private void Init()
 	{
 		// write here code to be called on component initialization
 		InitWorldTrigger();
 		LoadVariables();
-		// PropLib.LoadVariables(node, "BonfireProp", new []{"Damage", "TicksPerMinute"});
 	}
 
 	private void LoadVariables()
@@ -63,18 +86,11 @@ public class BonfireComponent : Component
 
 	private void Update()
 	{
-		// write here code to be called before updating each render frame
-		timers = timers.Select(TimerTick).ToList();
-	}
-
-	private PlayerTimer TimerTick(PlayerTimer playerTimer)
-	{
-		if (!(playerTimer.time <= 0.0f))
-			return new PlayerTimer(playerTimer.healthComponent, playerTimer.time - Game.IFps);
-		
-		TakeDamage(playerTimer.healthComponent);
-		return new PlayerTimer(playerTimer.healthComponent, playerTimer.time = 60.0f / TicksPerMinute);
-
+		var iFps = Game.IFps;
+		foreach (var timer in timers)
+		{
+			timer.Tick(iFps);
+		}
 	}
 
 	private void ObjectEntered(Node enteredNode)
@@ -84,9 +100,11 @@ public class BonfireComponent : Component
 		{
 			return;
 		}
-		timers.Add(new PlayerTimer(healthComponent, 60.0f / TicksPerMinute));
+
+		var playerTimer = new PlayerTimer(healthComponent, TicksPerMinute, TakeDamage);
+		timers.Add(playerTimer);
 	}
-	
+
 	private void ObjectLeaved(Node leavedNode)
 	{
 		var healthComponent = leavedNode.GetComponentInChildren<HealthComponent>();
@@ -95,24 +113,12 @@ public class BonfireComponent : Component
 			return;
 		}
 
-		PlayerTimer? playerTimer = null;
-		foreach (var timer in timers.Where(timer => timer.healthComponent == healthComponent))
-		{
-			playerTimer = timer;
-			break;
-		}
+		var playerTimer = timers.FirstOrDefault(timer => timer.HealthComponent == healthComponent);
 
 		if (playerTimer == null)
 		{
-			
 			return;
 		}
-		timers.Remove((PlayerTimer)playerTimer);
-	}
-
-	private void TakeDamage(HealthComponent healthComponent)
-	{
-		Log.Message($"Take damage\n");
-		healthComponent.TakeDamage(10);
+		timers.Remove(playerTimer);
 	}
 }
