@@ -2,7 +2,7 @@
 <asset version="2.11.0.0">
 	<guid>3aa8b9d396a575163ea2a97dc76e5cb863f2f8b7</guid>
 	<type>component</type>
-	<hash>cf6dadb1</hash>
+	<hash>a11da7eb</hash>
 	<runtimes>
 		<runtime id="3aa8b9d396a575163ea2a97dc76e5cb863f2f8b7" name="BonfireComponent.cs" link="0"/>
 		<runtime id="68bd7eaa6d201e01811ddf6c838453dbd3f3777e" name="BonfireComponent.prop" link="1"/>

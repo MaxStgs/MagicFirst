@@ -176,11 +176,7 @@ public class PlayerController : Component
 
 	private int[] states = new int[(int)State.NumStates];
 	private float[] times = new float[(int)State.NumStates];
-
-	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// MAIN METHODS
-	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+	
 	void Init()
 	{
 		camera = playerDummy.Camera;
@@ -238,14 +234,6 @@ public class PlayerController : Component
 		UpdateRigid(ifps);
 	}
 	
-
-	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	// PUBLIC METHODS
-	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-	// transform
-	// (note: use these methods if you want to change position of the player.
-	// node.WorldTransform doesn't work)
 	public void SetTransform(mat4 transform)
 	{
 		node.Transform = transform;
@@ -289,8 +277,7 @@ public class PlayerController : Component
 	{
 		return shape.Height;
 	}
-
-	// phi angle
+	
 	public void SetPhiAngle(float angle)
 	{
 		angle = angle - phiAngle;
@@ -304,8 +291,7 @@ public class PlayerController : Component
 	{
 		return phiAngle;
 	}
-
-	// view direction
+	
 	public void SetViewDirection(vec3 view)
 	{
 		direction = MathLib.Normalize(view);
