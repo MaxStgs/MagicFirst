@@ -22,3 +22,5 @@ launch_release.bat
 !bin/unigine.cfg
 plugins/*/x64
 voxel_probes
+/data/guids.db
+*.meta
