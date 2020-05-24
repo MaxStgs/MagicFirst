@@ -5,7 +5,7 @@ _ReSharper.Caches
 .vscode
 
 # Engine
-bin
+/bin/
 .thumbnails
 obj
 junk
@@ -23,4 +23,4 @@ launch_release.bat
 plugins/*/x64
 voxel_probes
 /data/guids.db
-*.meta
+*.cs.meta
